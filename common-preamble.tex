@@ -1,0 +1,119 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% UNICODE: make θ
+\usepackage[mathletters]{ucs}
+\usepackage[utf8x]{inputenc}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Referencing
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\refequ}[1]{Eq.~(\ref{equ:#1})}
+\newcommand{\refap}[1]{Appendix \ref{ap:#1}}
+\newcommand{\refapp}[1]{Appendix \ref{app:#1}}
+\newcommand{\reffig}[1]{Figure~\ref{fig:#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Characters
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% "Remove" any exist single-letter commands
+\providecommand{\A}{}
+\providecommand{\B}{}
+\providecommand{\C}{}
+\providecommand{\D}{}
+\providecommand{\E}{}
+\providecommand{\F}{}
+\providecommand{\G}{}
+\providecommand{\H}{}
+\providecommand{\I}{}
+\providecommand{\J}{}
+\providecommand{\K}{}
+\providecommand{\L}{}
+\providecommand{\M}{}
+\providecommand{\N}{}
+\providecommand{\O}{}
+\providecommand{\P}{}
+\providecommand{\Q}{}
+\providecommand{\R}{}
+\providecommand{\S}{}
+\providecommand{\T}{}
+\providecommand{\U}{}
+\providecommand{\V}{}
+\providecommand{\W}{}
+\providecommand{\X}{}
+\providecommand{\Y}{}
+\providecommand{\Z}{}
+\providecommand{\a}{}
+\providecommand{\b}{}
+\providecommand{\c}{}
+\providecommand{\d}{}
+\providecommand{\e}{}
+\providecommand{\f}{}
+\providecommand{\g}{}
+\providecommand{\h}{}
+\providecommand{\i}{}
+\providecommand{\j}{}
+\providecommand{\k}{}
+\providecommand{\l}{}
+\providecommand{\m}{}
+\providecommand{\n}{}
+\providecommand{\o}{}
+\providecommand{\p}{}
+\providecommand{\q}{}
+\providecommand{\r}{}
+\providecommand{\s}{}
+\providecommand{\t}{}
+\providecommand{\u}{}
+\providecommand{\v}{}
+\providecommand{\w}{}
+\providecommand{\x}{}
+\providecommand{\y}{}
+\providecommand{\z}{}
+% Now can just use renewcommand
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Tables
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{table}
+%   \centering
+%   \arraystretch{1.2}
+%   \setlength{\tabcolsep}{5.5pt}
+%   \rowcolors{2}{white}{lightbluishgrey}
+%   \begin{tabular}{l r r r r r r r r r r r r r r r r r r}
+%     \rowcolor{white}
+%       col1 & \makecell{long name \\ col2} &  \\
+%     \midrule
+%       item1 & entry1\\
+%     \bottomrule
+%   \end{tabular}
+%   \caption{ }
+% \end{table}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{makecell}
+\usepackage[table]{xcolor}
+\definecolor{white}{rgb}{1,1,1}
+\definecolor{lightbluishgrey}{rgb}{0.76471,0.84824,0.91647}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Figures
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{subcaption}
+\usepackage{wrapfig}
+\usepackage{graphicx}
+
+\usepackage{listings}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Line widths and font sizes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{layouts}
+\makeatletter 
+% \layoutdetails will insert a table listing the layout sizes and fonts in use
+\newcommand{\layoutdetails}{%
+\begin{tabular}{ll}
+ \texttt{\textbackslash{textwidth}} & \printinunitsof{in}\prntlen{\textwidth} \\
+\texttt{\textbackslash{linewidth}} & \printinunitsof{in}\prntlen{\linewidth} \\
+Main text font &  \f@size pt \f@family \\
+\sffamily \small Caption text font &  \sffamily \small \f@size pt \f@family \\
+\end{tabular}%
+}
+\makeatother 

@@ -1,0 +1,29 @@
+% The first command in your LaTeX source must be the \documentclass command.
+\PassOptionsToPackage{table}{xcolor}
+\documentclass[acmtog,nonacm,timestamp,review]{acmart}
+\citestyle{acmauthoryear}
+\setcitestyle{square}
+
+\input{common-preamble}
+
+\begin{document}
+
+\title{Alec's Minimal LaTeX Setup for SIGGRAPH}
+
+\author{Alec Jacobson}
+\affiliation{\institution{University of Toronto}}
+
+\begin{abstract}
+\end{abstract}
+
+%\begin{teaserfigure}
+%\end{teaserfigure}
+
+\maketitle
+
+\layoutdetails
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{references.bib}
+
+\end{document}

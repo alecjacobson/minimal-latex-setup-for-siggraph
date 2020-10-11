@@ -1,0 +1,14 @@
+.DS_Store
+.*.un~
+.*.swp
+.*.swo
+acmart.bib
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.pdf.skim.pdf
+*.synctex.gz
