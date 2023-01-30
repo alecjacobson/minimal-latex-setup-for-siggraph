@@ -1,6 +1,23 @@
 % The first command in your LaTeX source must be the \documentclass command.
 \PassOptionsToPackage{table}{xcolor}
 \documentclass[acmtog,nonacm,review]{acmart}
+
+% Don't force me to include country.
+% https://tex.stackexchange.com/a/655629/13600
+\makeatletter
+\def\@ACM@checkaffil{% Only warnings
+    \if@ACM@instpresent\else
+    \ClassWarningNoLine{\@classname}{No institution present for an affiliation}%
+    \fi
+    \if@ACM@citypresent\else
+    \ClassWarningNoLine{\@classname}{No city present for an affiliation}%
+    \fi
+    \if@ACM@countrypresent\else
+        \ClassWarningNoLine{\@classname}{No country present for an affiliation}%
+    \fi
+}
+\makeatother
+
 \citestyle{acmauthoryear}
 \setcitestyle{square}
 
